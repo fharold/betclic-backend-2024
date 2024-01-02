@@ -2,20 +2,21 @@
 
 ## Tools used
 
-| Tool           | Usage                                             |
-|----------------|---------------------------------------------------|
-| Ktor           | Framework                                         |
-| Netty          | Network engine                                    |
-| PostgreSQL     | Database                                          |
-| ORM            | Exposed                                           |
-| Authentication | **NONE**                                          |
-| Tests          | Unit tests in test package (+ Postman collection) |
+| Tool           | Usage                                                    |
+|----------------|----------------------------------------------------------|
+| Ktor           | Framework                                                |
+| Netty          | Network engine                                           |
+| PostgreSQL     | Database                                                 |
+| ORM            | Exposed                                                  |
+| Authentication | **NONE**                                                 |
+| Tests          | Integration tests in test package (+ Postman collection) |
 
 ## How to start
 Set postgreSQL server and database infos in resources/application.conf.
 
 ```
 chmod +x gradlew
+./gradlew :test --tests "fr.fritsch.betclic.ApplicationTest" 
 ./gradlew run
 ```
 

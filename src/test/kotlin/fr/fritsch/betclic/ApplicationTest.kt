@@ -2,6 +2,8 @@ package fr.fritsch.betclic
 
 import fr.fritsch.betclic.database.DatabaseSingleton
 import fr.fritsch.betclic.models.Player
+import fr.fritsch.betclic.plugins.configureRouting
+import fr.fritsch.betclic.plugins.configureSerialization
 import io.ktor.client.request.*
 import io.ktor.client.request.forms.*
 import io.ktor.client.statement.*
@@ -13,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class PlayerRouteTest {
+class ApplicationTest {
     private fun initDb(environment: ApplicationEnvironment) {
         val jdbcURL = environment.config.property("postgres.url").getString()
         val user = environment.config.property("postgres.user").getString()
