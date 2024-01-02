@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "5a611a04-b0e1-44b2-b8ac-f24bba377359",
+		"name": "Prospection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "427527"
+	},
+	"item": [
+		{
+			"name": "Betclic",
+			"item": [
+				{
+					"name": "Players",
+					"item": [
+						{
+							"name": "get players",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/players?sort=DESC",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"players"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "DESC",
+											"description": "ASC | DESC | <empty>"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get player",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/players/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"players",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add player",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ttt",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/players",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"players"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit player",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "OG1",
+											"type": "text"
+										},
+										{
+											"key": "score",
+											"value": "9001",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/players/:id",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"players",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all players",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ttt",
+											"type": "text"
+										},
+										{
+											"key": "score",
+											"value": "32",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/players",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"players"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080"
+		}
+	]
+}
